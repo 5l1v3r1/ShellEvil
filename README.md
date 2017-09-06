@@ -1,6 +1,6 @@
 # ShellEvil
 
-- Jonatas Fil (Dkr) 
+- Jonatas Fil (dark00x1n) 
 - Julio Della Flora 
 - Thiago Sena (THX)
 
